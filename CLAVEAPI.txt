@@ -1,0 +1,13 @@
+CLAVE DE API
+
+AIzaSyB7UtCutgwElDLrxbvn47sQfppA-gF1mSY
+
+IDS DE OAUTH 2.0
+
+ID CLIENTE
+
+588525732994-1ksaocgej6merkbvmsuonbuc3cci4t89.apps.googleusercontent.com
+
+SECRETO DE CLIENTE
+
+RabObQxDWCOYvd-wapygQ3o1
