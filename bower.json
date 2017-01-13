@@ -1,0 +1,28 @@
+{
+  "name": "BOOKS RECOMMENDER",
+  "authors": [
+    "Rossquilleta <rosanisima@gmail.com>"
+  ],
+  "description": "\"proyecto app web\"",
+  "main": "",
+  "keywords": [
+    "\"books\"",
+    "\"recomendador\"",
+    "\"recommender\""
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies":{
+	"jquery": "~3.1.1",
+	"bootstrap": "~3.3.7",
+	"angular": "1.4.7",
+	"angular-route": "1.4.7"  
+  }
+}
