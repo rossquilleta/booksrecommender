@@ -1,0 +1,98 @@
+<html>
+
+<head>
+	<title>Books API</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+</head>
+
+<body>
+<fieldset id="registrar">
+<input id="txtmail" type="email" placeholder="Email">
+<input id="txtPass" type="password" placeholder="Contraseña"><br>
+<button id="btnLogin" class="btn btn-primary">Login</button>
+<a href="registrofire.html" id="btnSignUp">No tengo cuenta</a>
+</fieldset>
+	<h1> Busca tu libro </h1>
+	<fieldset>
+		<input id="busca" type="text" name="busca">
+		<button id="boton" type="button">Click</button>
+	</fieldset>
+
+	<div id="resultados">
+
+</div>
+
+<div class="container">
+<!--  <h2>Modal Example</h2>
+  Trigger the modal with a button
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" id="selecc">
+
+					<label for="input-4" class="control-label">Rate This</label>
+					<input id="input-4" name="input-4" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
+					<div class="bs-example">
+				<label for="input-4" class="control-label">Rate This</label>
+				<div class="rating-container rating-md rating-animate">
+					<div class="rating">
+						<span class="empty-stars"><span class="star">
+								<i class="glyphicon glyphicon-star-empty"></i></span><span class="star">
+								<i class="glyphicon glyphicon-star-empty"></i></span><span class="star">
+								<i class="glyphicon glyphicon-star-empty"></i></span><span class="star">
+								<i class="glyphicon glyphicon-star-empty"></i></span><span class="star">
+								<i class="glyphicon glyphicon-star-empty"></i></span>
+					  </span>
+					<span class="filled-stars" style="width: 0%;">
+						<span class="star">
+							<i class="glyphicon glyphicon-star"></i>
+						</span><span class="star">
+							<i class="glyphicon glyphicon-star"></i>
+						</span><span class="star">
+							<i class="glyphicon glyphicon-star"></i>
+						</span><span class="star">
+							<i class="glyphicon glyphicon-star"></i>
+						</span>
+						<span class="star">
+							<i class="glyphicon glyphicon-star"></i>
+						</span>
+					</span>
+				</div>
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info" data-dismiss="modal" onclick="registro">Guardar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript"></script>
+<script type="text/javascript" src="modalselecc.js"></script>
+<script type="text/javascript" src="registrofire.js"></script>
+<script type="text/javascript" src="funciones.js"></script>
+
+<script src="bower_components/jquery"></script>
+<script src="bower_components/bootstrap"></script>
+<!-- <script src="bower_components/firebase/firebase"></script>  -->
+</body>
+</html>

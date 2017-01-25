@@ -1,0 +1,75 @@
+<style type="text/css">
+
+.empty-stars {
+  color: #aaa;
+}
+.star {
+  display: inline-block;
+  margin: 0 3px;
+  text-align: center;
+}
+
+.rating-container .filled-stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: auto;
+  color: #fde16d;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #777;
+  text-shadow: 1px 1px #999;
+}
+.containero{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 40%;
+  padding-bottom: : 20px;
+
+}
+
+#registrar{
+    height: 15px;
+    width: 20%;
+    float: right;
+    font-size: 8px;
+}
+#registrar button{
+  font-size: 8px;
+}
+#resultados{
+      height: 200px;
+      width: 150px;
+      background-color: #B5B8BC;
+      display: inline;
+  }
+   #resultados.p{
+      background-color: #B5B8BC;
+   }
+   #listado{
+      size: 100px:;
+      border-color: grey;
+      background: red;
+   }
+   .libro{
+      width: 200px;
+      height: 250px;
+   }
+
+   .datos{
+      position: relative;
+      right: inherit;
+      display: inline;
+   }
+   .celda{
+    float: left;
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+   }
+
+   .portadamodal{
+     float: right;
+   }
