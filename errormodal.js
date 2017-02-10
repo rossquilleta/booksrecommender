@@ -4,7 +4,8 @@ function buscador() {
 	selecc = document.getElementById("selecc");
 	idimg = document.getElementsByClassName("idimg")
 	isbn = "";
-  resultados = "";
+	seleccionado = false;
+	elegidos = [];
 
 	$.ajax({
 	url: "https://www.googleapis.com/books/v1/volumes?q=" + busca,
@@ -33,66 +34,30 @@ function buscador() {
 				}
 				//selecc.innerHTML += data.items[i].volumeInfo.authors + data.items[i].volumeInfo.title
 
-				var port = data.items[i].volumeInfo.imageLinks.smallThumbnail;
-				var isbn = data.items[i].volumeInfo.industryIdentifiers.identifiers;
+				const port = data.items[i].volumeInfo.imageLinks.smallThumbnail;
+				const isbn = data.items[i].volumeInfo.industryIdentifiers.identifiers;
+				const autor = data.items[i].volumeInfo.authors;
+				const titulo = data.items[i].volumeInfo.title;
 			  var poss = i;
 				idimg = "portada"+i;
+
+
+
 				resultados.innerHTML += "<div class='celda'>"
-					+ '<button type="button" data-toggle="modal" data-target="#myModal" id="idimg" onclick="portada(this)">'
+					+ "<button type='button' data-toggle='modal' data-target='#myModal' id='idimg' onclick='seleccionado=true; portada(\""+titulo+"\")'>"
 					+ "<div class='portadamodal'>"
+					+ "<p>" + titulo + "</p>"
 					+ '<img src="'+port+'"/>'
 					+ '</button>'
 					+ "</div>"
 
-					function portada() {
-						$('.portadamodal img').click(function() {
-	        	//	var poss  = $(this).index();
-	        		poss = this.selectedIndex;
-							selecc.innerHTML += '<h3 style="color:#5D4C62";>'
-								+ '<h2'>+data.items[poss].volumeInfo.title+'</h2>'
-								+ data.items[poss].volumeInfo.subtitle+"<br> "
-								+ data.items[poss].volumeInfo.authors + "<br>"
-								+'<img src="'+data.items[poss].volumeInfo.imageLinks.smallThumbnail+'"/>'
-	    });
-					}
 
 
 				}
-
-
-				selecc.innerHTML += '<h3 style="color:#5D4C62";>'
-					+ data.items[i].volumeInfo.title+'</h2>'
-					+ data.items[i].volumeInfo.subtitle+"<br> "
-					+ data.items[i].volumeInfo.authors + "<br>"
-					+'<img src="'+data.items[i].volumeInfo.imageLinks.smallThumbnail+'"/>'
-		},
+			},
 		type: "GET",
 	});
 }
-
-jQuery('#idimg').click(function(){
-  $(this).data('clicked', true);
-});
-
-
-
-function registro() {
-	if(jQuery('#idimg').data('clicked')) {
-	  //  registro();
-	    $('idimg').click(function() {
-			  var i = $(this).index();
-				if (i==pos) {
-					selecc.innerHTML += '<h3 style="color:#5D4C62";>'
-						+ data.items[i].volumeInfo.title+'</h2>'
-						+ data.items[i].volumeInfo.subtitle+"<br> "
-						+ data.items[i].volumeInfo.authors + "<br>"
-						+'<img src="'+port+'"/>'
-}
-				})
-        alert('Has clickado sobre el elemento número: '+i);
-    };
-
-};
 
 //var boton = document.getElementById("boton").addEventListener("click", buscador, false)
 $("#boton").on("click", buscador)

@@ -1,5 +1,5 @@
 
-  //src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"
+url="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyDxNosP3CHioA_HIUxahCXjybLerSfBgWY",
@@ -8,7 +8,8 @@
     storageBucket: "usuariosbr-151311.appspot.com",
     messagingSenderId: "128283877980"
   };
-  firebase.initializeApp(config);
+
+    firebase.initializeApp(config);
     //alert(app);
 
         var txtEmail = document.getElementById('txtmail');
@@ -57,9 +58,23 @@ function registro() {
                 });
                 }
 
-                function portada(resultados) {
-                    selecc.innerHTML += resultados;
-                    /*for (var variable in resultados) {
-                          selecc.innerHTML +=resultados[variable]
-                        }*/
-                }
+      function portada() {
+            seleccionado = true;
+                var posicion = document.getElementsById("idimg").val();
+                alert("psoici "+posicion+"valor "+idimg);
+                /*
+                  for (var libro in resultados) {
+                      if (seleccionado) {
+                        poss = this.selectedIndex;
+                      //	alert("posicion "+poss);
+                        alert("posicion "+poss+" y valor "+selecc.items[poss].volumeInfo.title);
+                        alert("libro "+libro);
+                        selecc.innerHTML += '<h3 style="color:#5D4C62";>'
+                          + '<h2'>+selecc.items[poss].volumeInfo.title+'</h2>'
+                          + data.items[poss].volumeInfo.subtitle+"<br> "
+                          + data.items[poss].volumeInfo.authors + "<br>"
+                          +'<img src="'+data.items[poss].volumeInfo.imageLinks.smallThumbnail+'"/>'
+                      }
+                    }*/
+
+                    }

@@ -32,13 +32,15 @@ function buscador() {
 				}
 				//selecc.innerHTML += data.items[i].volumeInfo.authors + data.items[i].volumeInfo.title
 
-				var port = data.items[i].volumeInfo.imageLinks.smallThumbnail;
-				var isbn = data.items[i].volumeInfo.industryIdentifiers.identifiers;
+				const port = data.items[i].volumeInfo.imageLinks.smallThumbnail;
+				const isbn = data.items[i].volumeInfo.industryIdentifiers.identifiers;
+				const autor = data.items[i].volumeInfo.authors;
+				const titulo = data.items[i].volumeInfo.title;
 			  var poss = i;
 				idimg = "portada"+i;
 
 				resultados.innerHTML += "<div class='celda'>"
-					+ '<button type="button" data-toggle="modal" data-target="#myModal" id="idimg" onmouseover="seleccionado=true" onclick="portada(this)">'
+					+ '<button type="button" data-toggle="modal" data-target="#myModal" id="idimg" onclick="seleccionado=true; portada(\''+titulo+'\')">'
 					+ "<div class='portadamodal'>"
 					+ '<img src="'+port+'"/>'
 					+ '</button>'
