@@ -1,0 +1,58 @@
+Crear usuario
+
+Crear objeto Libro para guardarlo
+
+function Elemento(descripcion, cantidad, precio) {
+  this.descripcion = descripcion;
+  this.cantidad = cantidad;
+  this.precio = precio;
+}
+
+
+
+Guardando libro en cuenta usuario:
+
+function Factura(cliente, elementos) {
+  this.cliente = cliente;
+  this.elementos = elementos;
+  this.informacion = {
+    baseImponible:  0,
+    iva:            16,
+    total:          0,
+    formaPago:      "contado"
+  };
+};
+//Añadir elementos al final del Array
+
+Array.prototype.anadir = function(elemento) {
+  this[this.length] = elemento;
+}
+
+// Creación de una factura
+var elCliente = new Cliente("Cliente 1", "", "", "");
+var losElementos = [new Elemento("elemento1", "1", "5"),
+                    new Elemento("elemento2", "2", "12"),
+                    new Elemento("elemento3", "3", "42")
+                   ];
+var laFactura = new Factura(elCliente, losElementos);
+laFactura.muestraTotal();
+
+// Funcion que añade elementos al final del array
+Array.prototype.anadir = function(elemento) {
+  this[this.length] = elemento;
+}
+
+
+Factura.prototype.calculaTotal = function() {
+  for(var i=0; i<this.elementos.length; i++) {
+    this.informacion.baseImponible += this.elementos[i].cantidad * this.elementos[i].precio;
+  }
+  this.informacion.total = this.informacion.baseImponible * this.informacion.iva;
+}
+ 
+Factura.prototype.muestraTotal = function() {
+  this.calculaTotal();
+  alert("TOTAL = " + this.informacion.total + " euros");
+}
+ 
+ 

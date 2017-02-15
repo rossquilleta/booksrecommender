@@ -1,0 +1,40 @@
+<html>
+   <head>
+   <script language="javascript">
+
+   //const tit = document.getElementById('titulo').value;
+  // const aut = document.getElementById('autor').value;
+
+   function Libro(titulo, autor) {
+      var tit = document.getElementById('titulo').value;
+      var aut = document.getElementById('autor').value;
+      this.titulo = tit;
+      this.autor = aut;
+      this.mostrar = function mostrar(){
+           alert(this.titulo + ' está bien, es de '+ this.autor);
+       }
+   }
+
+   var mislibros = [new Libro(titulo, autor),
+                    new Libro(titulo, autor),
+                    new Libro(titulo, autor)
+                   ];
+
+   </script>
+   </head>
+   <body>
+   <form>
+     <input type="text" name="titulo" value="" id="titulo">Busca titulo
+     <input type="text" name="autor" value="" id="autor">Busca autor
+     <button type="button" name="button" onclick="mostrador()">clase</button>
+   </form>
+   <script>
+       function mostrador() {
+         var elegido = new Libro();
+
+         elegido.mostrar();
+       }
+
+   </script>
+   </body>
+   </html>
