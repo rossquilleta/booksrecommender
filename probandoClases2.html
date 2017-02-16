@@ -1,0 +1,110 @@
+<html>
+   <head>
+   <script language="javascript">
+
+    tit = "";
+    aut = "";
+    mislibros = [];
+    tam = 0;
+
+   function Libro(titulo, autor) {
+      var tit = document.getElementById('titulo').value;
+      var aut = document.getElementById('autor').value;
+      this.titulo = tit;
+      this.autor = aut;
+
+      mislibros = [{"titulo":"", "autor":""}];
+      mislibros.titulo = tit;
+      mislibros.autor = aut;
+
+      this.mostrar = function mostrar(){
+          // console.log((this.titulo + ' está bien, es de '+ this.autor));
+          for (var i = 1; i < mislibros.length; i++) {
+            for (var j = 1; j < mislibros.length; j++) {
+            //  alert(mislibros.titulo[i][j]);
+              //alert(mislibros.autor[i][j]);
+            }
+            alert(mislibros.titulo[i][j]);
+            alert(mislibros.autor[i][j]);
+          }
+        //  alert(mislibros.titulo[i][j]);
+          //alert(mislibros.autor[i][j]);
+        }
+
+      this.anadir = function anadir(){
+        if ((tit!=null)||(aut!=null)) {
+          for (var i = 1; i < mislibros.length; i++) {
+            for (var j = 1; j < mislibros.length; j++) {
+              mislibros.titulo[i][j] = tit;
+              mislibros.autor[i][j] = aut;
+            }
+            //mislibros.titulo[i][j]);
+          //  mislibros.autor[i][j]);
+          }
+        }
+      }
+
+
+   Array.prototype.anadir = function(mislibros) {
+    //this.length = tam;
+    for (var i = 0; i < mislibros.length; i++) {
+      mislibros[i].titulo = tit;
+      mislibros[i].autor = aut;
+    }
+    //mislibros[tam].titulo = tit;
+  //  mislibros[tam].autor = aut;
+    //this[this.length] = Libro[this.length];
+    //tam++;
+  }
+
+  Libro.prototype.mostrar = function (mislibros) {
+    for (var i = 50; i > mislibros.length; i--) {
+      alert(mislibros[i]);
+    }
+  };
+
+/*
+   function guardar() {
+     mislibros = [new Libro()];
+     tit = document.getElementById('titulo').value;
+     aut = document.getElementById('autor').value;
+
+     if ((tit!=null)||(aut!=null)) {
+       for (var i = 50; i > mislibros.length; i--) {
+         mislibros.anadir(mislibros[i]);
+         //console.log(mislibros[i]);
+       }
+     }
+     else{
+       alert("Hasta pronto");
+     }
+   }*/
+}
+
+   </script>
+   </head>
+   <body>
+   <form>
+     <input type="text" name="titulo" value="" id="titulo">Busca titulo
+     <input type="text" name="autor" value="" id="autor">Busca autor
+     <button type="button" name="button" onclick="mostrador()">clase</button>
+     <button type="button" name="seguir" onclick="guardar()">Guardar</button>
+   </form>
+   <script>
+
+       function mostrador() {
+         guardar();
+         var muestra = new (Libro);
+         muestra.mostrar();
+     }
+
+     function guardar() {
+       var muestra = new (Libro);
+       muestra.anadir(mislibros);
+       tit = "";
+       aut = "";
+     }
+
+   </script>
+   </body>
+   </html>
